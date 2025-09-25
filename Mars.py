@@ -71,7 +71,7 @@ class MarsDataAnalyzer:
             },
             "magnetic_field": {
                 "base_value": 0,
-                "cycle_years": 0,
+                "cycle_years": 1.88,  # Corrigé: ne peut pas être 0
                 "amplitude": 5,
                 "trend": "localisé",
                 "unit": "nT",
@@ -79,7 +79,7 @@ class MarsDataAnalyzer:
             },
             "seismic_activity": {
                 "base_value": 1,
-                "cycle_years": 0,
+                "cycle_years": 1.88,  # Corrigé: ne peut pas être 0
                 "amplitude": 2,
                 "trend": "sporadique",
                 "unit": "Magnitude",
@@ -163,6 +163,10 @@ class MarsDataAnalyzer:
         base_value = self.config["base_value"]
         cycle_years = self.config["cycle_years"]
         amplitude = self.config["amplitude"]
+        
+        # Protection contre la division par zéro
+        if cycle_years == 0:
+            cycle_years = 1.88  # Valeur par défaut (année martienne)
         
         values = []
         for i, date in enumerate(dates):
