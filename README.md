@@ -20,9 +20,9 @@ Types de données martiennes disponibles:
 
 6. Radiation solaire en surface
 
-7. Champ magnétique résiduel ( available soon . . . )
+7. Champ magnétique résiduel 
 
-8. Activité sismique (marsquakes) ( available soon . . . )
+8. Activité sismique (marsquakes) 
 
 9. Distance au Soleil
 
